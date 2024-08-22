@@ -12,34 +12,30 @@ jobs:
         with:
           root_file: main.tex
         
-      - name: Upload artifact
+      - name: Uploading artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF
           path: main.pdf
 
-  upload_pdf:
-    needs: build_latex
-    runs-on: ubuntu-latest
-    steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: PDF
-
+  
       - name: Unzip PDF
         run: unzip -o PDF.zip -d PDF
-
+  
       - name: Set up Git repository
         uses: actions/checkout@v2
-
+  
       - name: Commit and push PDF
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          mv PDF/main.pdf .
-          git add main.pdf
-          git commit -m "Add generated PDF"
-          git push
+            git config user.name "github-actions"
+            git config user.email "github-actions@github.com"
+            mv PDF/main.pdf .
+            git add main.pdf
+            git commit -m "Add generated PDF"
+            git push
