@@ -50,7 +50,7 @@ jobs:
         run: |
             git config user.name "github-actions"
             git config user.email "github-actions@github.com"
-            mv PDF/main.pdf .
+            ls -la
             git add main.pdf
             git commit -m "Add generated PDF"
             git push
