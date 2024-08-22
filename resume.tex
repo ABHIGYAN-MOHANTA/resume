@@ -1,0 +1,131 @@
+
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{\vspace{-10pt}\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Siksha 'O' Anusandhan University (ITER)}{Nov 2022 -- May 2026}
+{Bachelor of Technology in Computer Science Engineering}{ CGPA: 9.61 }
+\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Full Stack Engineer Intern}{Sep 2023 -- Aug 2024}
+{\href{https://www.linkedin.com/company/super-effective/}{Super Effective}}{Remote, Cayman Islands, UK}
+\resumeItemListStart
+\resumeItem{Developed the {\href{https://youtu.be/yYMy5EzJf-Y?si=d6UlBhrpAoGhwKgY}{\textbf{Select Threader Chrome Extension}}}, replacing an expensive Twitter bot and saving \textbf{\$5000 per month} by bypassing \textbf{\href{https://developer.x.com/en/docs/x-api/getting-started/about-x-api}{Twitter API V2 pricing}}. The extension scrapes threads from Twitter, Reddit, and other websites, and allows users to create and share thread pages with just a few clicks, directly integrating with the app and website.}
+\resumeItem{\textbf{Set up CI/CD pipelines} for the Threader, enabling \textbf{biweekly releases}, and integrated \textbf{Sentry for performance monitoring} within the Chrome extension environment.}
+\resumeItem{Created an Elixir service called Twitter BreadCrumb Service that uses \textbf{OAuth V2} to leave breadcrumbs on Twitter, enhancing organic growth and user engagement.}
+\resumeItem{Migrated the threads \textbf{PostgreSQL} database table and wrote multiple \textbf{unit tests} to support this post type. Fixed minor bugs based on logs from \textbf{Grafana Loki} and \textbf{Prometheus}.}
+\resumeItem{Integrated thread pages into the \textbf{Next.js} \textbf{\href{https://the.select}{Web Client}}. Fixed minor bugs related to login events thrown by the Select \textbf{Auth Service}.}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+% \resumeSubHeadingListStart
+% \resumeSubheading
+% {Software Engineer}{Dec 2022 -- Jul 2023}
+% {\href{https://100devs.org/}{100Devs}}{Remote, Boston, US}
+% \resumeItemListStart
+% \resumeItem{Collaborated with a team of developers to build modern and responsive web applications using best practices}
+% \resumeItem{Built semantically structured full stack web applications with \textbf{Web Accessibility}}
+% \resumeItem{Applied agile methodologies like SCRUM for project management}
+% \resumeItemListEnd
+% \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{\textbf{\href{https://play.google.com/store/apps/details?id=com.thunderdome6602.UnbreakableMe}{\underline{UnbreakableMe on Google Play}}} $|$ \emph{ReactNative, Expo, Google Gemini}}{Aug 2023 - Sep 2023}
+\resumeItemListStart
+\resumeItem{UnbreakableMe, a platform born out of the unwavering determination inspired by David Goggins' life and his book, "Can't Hurt Me: Master Your Mind and Defy the Odds." I believe that every individual possesses the strength to overcome their darkest moments and rise above the challenges life presents.}
+\resumeItem{Worked with everything from \textbf{Audio/Video} and \textbf{AsyncStorage} to \textbf{Touch and Swipe Gestures} and \textbf{AI chat} with David Goggins using Google Gemini}
+\resumeItem{This was built as a part of \textbf{\href{https://buildspace.so/nw}{Nights and Weekends}} S4 by \textbf{\href{https://buildspace.so/}{Buildspace}}, which I graduated successfully!}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/ABHIGYAN-MOHANTA/Hackathon-Speedrunner-Frontend}{\underline{Hackathon Speedrunner Frontend}} \& \href{https://github.com/ABHIGYAN-MOHANTA/Hackathon-Speedrunner-Backend-v1.0.2}{\underline{Backend}}} $|$ \emph{React, Redux, Express, JWT, NoSQL}}{May 2023 -- July 2023} 
+\resumeItemListStart
+\resumeItem{Developed a one-stop solution for tracking hackathons and team building using \textbf{MVC Architecture}.}
+\resumeItem{It \textbf{Web Scrapes} event data in real-time from a number of websites, and the events that aren't tracked, users can post themselves. I used \textbf{Cloudinary} for image \textbf{Storage Bucket} and Multer for handling file uploads. Worked a lot with \textbf{Multipart form data}.}
+\resumeItem{Implemented security features including \textbf{CORS protection} and \textbf{JWT} for authentication, enhancing the security and robustness of the application.}
+\resumeSubHeadingListEnd
+
+%
+%----------- Skills -----------
+\vspace{-10px}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages}{: JavaScript, TypeScript, Java, Elixir, Python, SQL, HTML, CSS} \\
+        \textbf{Frameworks}{: Next.js, React, React Native, Redux, Node.js, Express, Phoenix} \\
+        \textbf{Operating Systems \& Environments}{: Debian, RHEL, Hyprland, i3, UNIX shell, Bash, SSH} \\
+        \textbf{DevOps \& Tools}{: Git, Docker, GitHub Actions, CircleCI, Prometheus, Grafana, Loki, Ansible, Vault} \\
+        \textbf{Editors}{: JetBrains IDE, Nvim, VsCode} \\
+        \textbf{Cloud Platform}{: Amazon Web Services} \\
+        \textbf{Databases: }{PostgreSQL, Redis, MongoDB} \\
+        }}
+
+\end{itemize}
+
+
+%
+% %----------- Achievements & Volunteering -----------
+\section{Achievements \& Volunteering}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        % \textbf{Languages}{: Python, Java, C, Dart, HTML, CSS, Assembly} \\
+        \textbf{\href{https://www.twilio.com/en-us}{Twilio Quest: }}{{\textbf{\href{{https://www.twilio.com/en-us}}{Won Twilio Quest}} in \textbf{\href{https://ghw.mlh.io/}{Global Hack Week}}, Sep 2022}} \\
+        % \textbf{Frameworks}{: Flutter, Flask, FastAPI, Kivy, KivyMD, TesseractOCR, PyInstaller, NumPy} \\
+        \textbf{\href{https://leetcode.com/u/ABHIGYAN_MOHANTA/}{Leetcode: }}{Rated 1604 in \href{https://leetcode.com/u/ABHIGYAN_MOHANTA/}{\textbf{Leetcode}}} \\
+        \textbf{Open Source Events: }{Contributed to Open Source as a part of \textbf{\href{https://hacktoberfest.com/}{Hacktoberfest 2022}} and \textbf{\href{https://gssoc.girlscript.tech/}{GSSOC 2023}}} \\
+        % \textbf{Tools and OS}{: Linux, UNIX shell, Bash, Git, SSH, Docker, Cisco Packet Tracer, Nmap, Wireshark} \\
+        % \textbf{Cloud Platform}{: Google Cloud Platform, Amazon Web Services} \\
+        % \textbf{Databases: }{Oracle DB, PostgreSQL, MySQL} \\
+        }}
+
+\end{itemize}
