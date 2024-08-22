@@ -26,16 +26,15 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-  
+        with:
+          token: ${{ secrets.TOKEN }}  # Use PAT instead of GITHUB_TOKEN
+
       - name: Download PDF artifact
         uses: actions/download-artifact@v4
         with:
           name: PDF
-  
+
       - name: Commit and push PDF
-        env:
-           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-           USERNAME: ${{ github.repository_owner }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
