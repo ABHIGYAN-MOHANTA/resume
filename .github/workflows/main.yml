@@ -29,17 +29,17 @@ jobs:
         with:
           name: PDF
   
-      - name: Find and unzip the artifact
-        run: |
-          # Find the zip file in the current directory
-          zip_file=$(find . -name '*.zip' | head -n 1)
-          if [ -z "$zip_file" ]; then
-            echo "No zip file found!"
-            exit 1
-          else
-            echo "Found zip file: $zip_file"
-            unzip -o "$zip_file" -d PDF
-          fi
+    #   - name: Find and unzip the artifact
+    #     run: |
+    #       # Find the zip file in the current directory
+    #       zip_file=$(find . -name '*.zip' | head -n 1)
+    #       if [ -z "$zip_file" ]; then
+    #         echo "No zip file found!"
+    #         exit 1
+    #       else
+    #         echo "Found zip file: $zip_file"
+    #         unzip -o "$zip_file" -d PDF
+    #       fi
   
       - name: Set up Git repository
         uses: actions/checkout@v2
