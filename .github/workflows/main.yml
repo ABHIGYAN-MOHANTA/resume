@@ -1,6 +1,7 @@
 name: Build LaTeX document
 
-on: [push]
+on:
+  workflow_dispatch:  # Allows the workflow to be triggered manually
 
 jobs:
   build_latex:
