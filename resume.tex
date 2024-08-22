@@ -1,3 +1,90 @@
+%-------------------------
+% Resume in Latex
+% Author : Abhigyan Mohanta
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+% \usepackage[sc,osf]{mathpazo}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+
+% Include this package in your preamble
+\usepackage{xcolor}
+
+% Define a custom color for links
+\definecolor{linkcolor}{RGB}{0, 0, 255}  % This is the typical blue color
+
+% Include the hyperref package and set the link color
+% \usepackage[colorlinks=true, linkcolor=linkcolor, urlcolor=linkcolor]{hyperref}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\footskip}{5pt}
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Abhigyan Mohanta} \\ \vspace{5pt}
+  \small \href{mailto:mohantaabhigyan02@gmail.com}{\underline{mohantaabhigyan02@gmail.com}} $|$
+  \href{https://linkedin.com/in/abhigyan-mohanta/}{\underline{LinkedIn}} $|$
+  \href{https://github.com/ABHIGYAN-MOHANTA}{\underline{GitHub}} $|$
+  \href{https://abhigyan-mohanta.vercel.app/}{\underline{abhigyan-mohanta.vercel.app}}
+\end{center}
+
+
 
 
 %-------------------------
@@ -129,3 +216,5 @@
         }}
 
 \end{itemize}
+% %-------------------------------------------
+\end{document}
