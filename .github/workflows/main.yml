@@ -1,20 +1,23 @@
 name: Build LaTeX document
 
 on:
-  workflow_dispatch:  # Allows the workflow to be triggered manually
+  push:
+    branches:
+      - main  # Adjust this to your branch if different
 
 jobs:
   build_latex:
+    if: contains(github.event.head_commit.message, 'deploy')  # Runs only if the commit message contains 'deploy'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-        
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-        
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
@@ -24,6 +27,7 @@ jobs:
   commit_pdf:
     needs: build_latex
     runs-on: ubuntu-latest
+    if: needs.build_latex.result == 'success'  # Runs only if build_latex succeeded
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
