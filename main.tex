@@ -20,26 +20,12 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-% \usepackage[sc,osf]{mathpazo}
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -47,31 +33,17 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{0pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
-
-
-% Include this package in your preamble
 \usepackage{xcolor}
-
-% Define a custom color for links
-\definecolor{linkcolor}{RGB}{0, 0, 255}  % This is the typical blue color
-
-% Include the hyperref package and set the link color
-% \usepackage[colorlinks=true, linkcolor=linkcolor, urlcolor=linkcolor]{hyperref}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{linkcolor}{RGB}{0, 0, 255}
 
 \setlength{\footskip}{5pt}
 \begin{document}
@@ -84,47 +56,26 @@
   \href{https://abhigyanmohanta.tech}{\underline{abhigyanmohanta.tech}}
 \end{center}
 
-
-
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-5pt}
-}
-
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1} & #2 \\
+  \textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}\vspace{-5pt}}
+\newcommand{\resumeSubSubheading}[2]{\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \textit{\small#1} & \textit{\small #2} \\
+\end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \small#1 & #2 \\
+\end{tabular*}\vspace{-5pt}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-    \newcommand{\resumeSubHeadingListEnd}{\vspace{-10pt}\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\vspace{-10pt}\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -134,64 +85,61 @@
 {Bachelor of Technology in Computer Science Engineering}{ CGPA: 9.61 }
 \resumeSubHeadingListEnd
 
-
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+{Fullstack Developer}{Sep 2024 -- Present}
+{\href{https://www.arthur.digital/}{Arthur Digital}}{Remote, Munich, Germany}
+\resumeItemListStart
+\resumeItem{Contributed to the development of an \textbf{elixir-based} \textbf{DataSync service} for keeping virtual room data up-to-date across distributed systems.}
+\resumeItem{Implemented real-time WebSocket communication layers in frontend clients for dynamic room state updates.}
+\resumeItem{Researched and prototyped A/V streaming solutions using \textbf{Kasm workspaces} for live client demos.}
+\resumeItem{Engineered custom media streaming pipelines using \textbf{FFmpeg}, \textbf{Puppeteer}, \textbf{WebSockets}, and \textbf{PubSub} systems to enable real-time, bidirectional communication between Arthur rooms and \textbf{Microsoft Teams}.}
+\resumeItem{Worked with \textbf{Unity} and \textbf{C\#} to support interactive modules and visuals within immersive virtual environments.}
+\resumeItem{Integrated \textbf{LLMs} to power \textbf{voice agent bots}, enabling natural language interaction inside virtual rooms.}
+\resumeItemListEnd
+
 \resumeSubheading
 {Full Stack Engineer Intern}{Sep 2023 -- Aug 2024}
 {\href{https://www.linkedin.com/company/super-effective/}{Super Effective}}{Remote, Cayman Islands, UK}
 \resumeItemListStart
-\resumeItem{Developed the {\href{https://youtu.be/yYMy5EzJf-Y?si=d6UlBhrpAoGhwKgY}{\textbf{Select Threader Chrome Extension}}}, replacing an expensive Twitter bot and potentially saving \textbf{\$5000 per month} by bypassing \textbf{\href{https://developer.x.com/en/docs/x-api/getting-started/about-x-api}{Twitter API V2 pricing}}. The extension scrapes threads from Twitter, Reddit, and other websites, and allows users to create and share thread pages with just a few clicks, directly integrating with the app and website.}
-\resumeItem{\textbf{Set up CI/CD pipelines} for the Threader, enabling \textbf{biweekly releases}, and integrated \textbf{Sentry for performance monitoring} within the Chrome extension environment.}
-\resumeItem{Created an Elixir service called Twitter BreadCrumb Service that uses \textbf{OAuth V2} to leave breadcrumbs on Twitter, enhancing organic growth and user engagement.}
-\resumeItem{Migrated the threads \textbf{PostgreSQL} database table and wrote multiple \textbf{unit tests} to support this post type. Fixed minor bugs based on logs from \textbf{Grafana Loki} and \textbf{Prometheus}.}
-\resumeItem{Integrated thread pages into the \textbf{Next.js} \textbf{\href{https://the.select}{Web Client}}. Fixed minor bugs related to login events thrown by the Select \textbf{Auth Service}.}
-
+\resumeItem{Developed the {\href{https://youtu.be/yYMy5EzJf-Y?si=d6UlBhrpAoGhwKgY}{\textbf{Select Threader Chrome Extension}}}, replacing an expensive Twitter bot and potentially saving \textbf{\$5000 per month} by bypassing \textbf{\href{https://developer.x.com/en/docs/x-api/getting-started/about-x-api}{Twitter API V2 pricing}}.}
+\resumeItem{\textbf{Set up CI/CD pipelines} for the Threader, enabling \textbf{biweekly releases}, and integrated \textbf{Sentry for performance monitoring}.}
+\resumeItem{Created an Elixir service called Twitter BreadCrumb Service using \textbf{OAuth V2} to increase user engagement.}
+\resumeItem{Migrated the threads \textbf{PostgreSQL} database table and wrote multiple \textbf{unit tests} to support this post type.}
+\resumeItem{Integrated thread pages into the \textbf{Next.js} \textbf{\href{https://the.select}{Web Client}} and resolved login event issues.}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
-
-% \resumeSubHeadingListStart
-% \resumeSubheading
-% {Software Engineer}{Dec 2022 -- Jul 2023}
-% {\href{https://100devs.org/}{100Devs}}{Remote, Boston, US}
-% \resumeItemListStart
-% \resumeItem{Collaborated with a team of developers to build modern and responsive web applications using best practices}
-% \resumeItem{Built semantically structured full stack web applications with \textbf{Web Accessibility}}
-% \resumeItem{Applied agile methodologies like SCRUM for project management}
-% \resumeItemListEnd
-% \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
 
-
-\resumeProjectHeading{\textbf{\href{https://play.google.com/store/apps/details?id=com.thunderdome6602.UnbreakableMe}{\underline{UnbreakableMe on Google Play}}} $|$ \emph{ReactNative, Expo, Google Gemini}}{Aug 2023 - Sep 2023}
+\resumeProjectHeading{\textbf{\href{https://play.google.com/store/apps/details?id=com.thunderdome6602.UnbreakableMe}{\underline{UnbreakableMe}}} $|$ \emph{React Native, Expo, Google Gemini}}{Aug 2023 -- Sep 2023}
 \resumeItemListStart
-\resumeItem{UnbreakableMe, a platform born out of the unwavering determination inspired by David Goggins' life and his book, "Can't Hurt Me: Master Your Mind and Defy the Odds." I believe that every individual possesses the strength to overcome their darkest moments and rise above the challenges life presents.}
-\resumeItem{Worked with everything from \textbf{Audio/Video} and \textbf{AsyncStorage} to \textbf{Touch and Swipe Gestures} and \textbf{AI chat} with David Goggins using Google Gemini}
-\resumeItem{This was built as a part of \textbf{\href{https://buildspace.so/nw}{Nights and Weekends}} S4 by \textbf{\href{https://buildspace.so/}{Buildspace}}, which I graduated successfully!}
+\resumeItem{A motivational mobile app inspired by David Goggins, featuring daily challenges, AI-powered journaling using Gemini, and multimedia support. Built and published on Play Store during Buildspace N\&W S4.}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{\href{https://github.com/ABHIGYAN-MOHANTA/Hackathon-Speedrunner-Frontend}{\underline{Hackathon Speedrunner Frontend}} \& \href{https://github.com/ABHIGYAN-MOHANTA/Hackathon-Speedrunner-Backend-v1.0.2}{\underline{Backend}}} $|$ \emph{React, Redux, Express, JWT, NoSQL}}{May 2023 -- July 2023} 
+\resumeProjectHeading{\textbf{\href{https://github.com/ABHIGYAN-MOHANTA/PixelDNS}{\underline{PixelDNS}}} $|$ \emph{Java}}{Jan 2024}
 \resumeItemListStart
-\resumeItem{Developed a one-stop solution for tracking hackathons and team building using \textbf{MVC Architecture}.}
-\resumeItem{It \textbf{Web Scrapes} event data in real-time from a number of websites, and the events that aren't tracked, users can post themselves. I used \textbf{Cloudinary} for image \textbf{Storage Bucket} and Multer for handling file uploads. Worked a lot with \textbf{Multipart form data}.}
-\resumeItem{Implemented security features including \textbf{CORS protection} and \textbf{JWT} for authentication, enhancing the security and robustness of the application.}
+\resumeItem{Built a working DNS server from scratch following Codecrafters guidelines. Focused on protocol handling and low-level networking in Java.}
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
-\resumeSubHeadingListEnd
-%
+
+
 %----------- Skills -----------
 \vspace{-10px}
 \section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: JavaScript, TypeScript, Java, Elixir, Python, SQL, HTML, CSS} \\
+        \textbf{Languages}{: JavaScript, TypeScript, Java, Elixir, Python, Go, SQL, HTML, CSS} \\
         \textbf{Frameworks}{: Next.js, React, React Native, Redux, Node.js, Express, Phoenix} \\
-        \textbf{Operating Systems \& Environments}{: Debian, RHEL, Hyprland, i3, UNIX shell, Bash, SSH} \\
+        \textbf{Operating Systems \& Environments}{: Debian, RHEL, MacOs, Hyprland, i3, UNIX shell, Bash} \\
         \textbf{DevOps \& Tools}{: Git, Docker, GitHub Actions, CircleCI, Prometheus, Grafana, Loki, Ansible, Vault} \\
         \textbf{Editors}{: JetBrains IDE, Nvim, VsCode} \\
         \textbf{Cloud Platform}{: Amazon Web Services} \\
@@ -199,9 +147,7 @@
         }}
 \end{itemize}
 
-
-%
-% %----------- Achievements & Volunteering -----------
+%----------- Achievements & Volunteering -----------
 \section{Achievements \& Volunteering}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
